@@ -1,0 +1,108 @@
+@import variables
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 10px
+
+body
+    display: flex
+    position: relative
+    justify-content: center
+    align-items: center
+    background-color: $yellow
+    font-family: Figtree, 'sans-serif'
+    font-size: 1.6rem
+    height: 100vh
+
+.card
+    margin: 20px
+    padding: 25px
+    max-width: 400px
+    background-color: $white
+    box-shadow: 10px 10px 0 0 $black
+    border-radius: 20px
+    border: 1px solid $black
+
+.card__illustration
+    display: block
+    width: 100%
+    border-radius: 15px
+
+.card__category
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 25px
+    background-color: $yellow
+    width: 85px
+    height: 30px
+    border-radius: 5px
+
+.card__category p
+    font-weight: 800
+
+.card__published
+    margin-top: 15px
+    font-size: 1.5rem
+    font-weight: 600
+
+.card__title
+    margin-top: 20px
+    font-size: 2.4rem
+    font-weight: 800
+    cursor: pointer
+    transition: color .3s
+
+.card__title:hover
+    color: $yellow
+
+.card__description
+    margin-top: 15px
+    color: $grey
+    line-height: 25px
+
+.card__author
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 15px
+    margin-top: 20px
+
+.card__author img
+    width: 32px
+
+.card__author p
+    font-size: 1.5rem
+    font-weight: 800
+
+.attribution
+    position: absolute
+    text-align: center
+    width: 100%
+    bottom: 10px
+    font-weight: 700
+
+.attribution a
+    padding: 5px 10px
+    text-decoration: none
+    background: $black
+    color: $yellow
+    border-radius: 10px
+    transition: background .3s, color .3s
+
+.attribution a:hover
+    background: $yellow
+    color: $black
+
+@media (max-width: 992px)
+    body
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+    
+    .attribution
+        position: static
